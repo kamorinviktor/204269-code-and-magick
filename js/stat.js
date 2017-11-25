@@ -30,11 +30,11 @@ window.renderStatistics = function (ctx, names, times) {
     ctx.fillText('Ура, вы победили!', shiftFromLeft + 133, shiftFromTop + 48);
     ctx.fillText('Список результатов (мс):', shiftFromLeft + 110, shiftFromTop + 70);
 
-    var histogramHeight = 100;
+    var histogramHeight = 150;
     var step = histogramHeight / (getMaxValue(times));
 
     var barWidth = 40;
-    var indent = 70;
+    var indent = 50;
     var initialX = shiftFromLeft + 90;
     var initialY = shiftFromTop + 240;
 
@@ -72,7 +72,7 @@ function getMaxValue(array) {
 
 function getColor(name) {
     if (name === 'Вы') {
-        return 'rgba(155, 5, 0, 1)';
+        return 'rgba(255, 0, 0, 1)';
     }
     var minColorValue = 50;
     var maxColorValue = 200;
